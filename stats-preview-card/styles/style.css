@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg:hsl(233, 47%, 7%);
+    --card-bg:hsl(244, 38%, 16%);
+    --violet-accent:hsl(277, 64%, 61%);
+
+    /* Neutral */
+    --white:hsl(0, 0%, 100%);
+    --transparent-white-a:hsla(0, 0%, 100%, 0.75);
+    --transparent-white-b:hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--white)
+}
+
+/* Main Section */
+
+.main {
+    width: 85%;
+    margin: 2em 0;
+    margin: 4em auto;
+
+    background-color: var(--card-bg);
+    border-radius: 0.8em;
+}
+
+.stat-img {
+    background-color: var(--violet-accent);
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+}
+
+.main-img-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.main-img-desktop {
+    display: none;
+}
+
+@media(min-width: 700px) {
+    .main {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .stat-img {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0.8em;
+        border-top-right-radius: 0.8em;
+    }
+
+    .main-img-desktop {
+        display: block;
+        width: 100%;
+        height: 100%;
+        grid-column: 2 / 3;
+        object-fit: cover;
+        mix-blend-mode: multiply;    
+    }
+
+    .main-img-mobile {
+        display: none;
+    }
+}
+
+/* Stats Content Section */
+
+.stats-content {
+    text-align: center;
+    padding: 1em;
+    margin: 2em 0;
+}
+
+.stat-card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.accent-highlight {
+    color: var(--violet-accent);
+}
+
+.stat-card-content {
+    margin: 2em 0;
+    color: var(--transparent-white-b);
+    line-height: 1.6;
+}
+
+.stat-list {
+    list-style-type: none;
+}
+
+.stat-item {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1.5em 0;  
+}
+
+.stat-item-desc {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--transparent-white-a);
+}
+
+@media(min-width: 700px) {
+    .stats-content {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        width: 70%;
+        margin-top: 3em;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .stat-card-title {
+        font-size: 2rem;
+    }
+
+    .stat-card-content {
+        font-size: 0.9rem;
+    }
+
+    .stat-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .stat-item {
+        margin-right: 2em;
+        font-size: 1.2rem;
+    }
+}
+

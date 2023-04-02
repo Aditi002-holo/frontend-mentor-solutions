@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-background:hsl(0, 100%, 74%);
+    --claim-it-btn:hsl(154, 59%, 51%);
+    --claim-it-btn-hover:hsl(154, 45%, 27%);
+    --try-it-btn:hsl(248, 32%, 49%);
+    --try-it-btn-hover:hsl(249, 26%, 26%);
+
+    /* Accent */
+    --blue-for-text:hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --dark-blue:hsl(249, 10%, 26%);
+    --grayish-blue:hsl(246, 25%, 77%);
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-background);
+    color: #fff;
+    background-image: url(../images/bg-intro-mobile.png);
+}
+
+.main {
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2.5em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 768px) {
+    .main {
+        max-width: 900px;
+        flex-direction: row;
+        column-gap: 2em;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4em;
+    }
+}
+
+/* Page Intro Section */
+
+.title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+.desc {
+    margin: 1em 0 3em;
+    font-size: 0.8rem;
+}
+
+@media(min-width: 768px) {
+    .section-desc {
+        text-align: left;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+}
+
+/* Buttons */
+
+.try-it-free-btn, .claim-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1em;
+    color: inherit;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+}
+
+
+
+/* Try it Free Button */
+
+.try-it-free-btn {
+    background-color: var(--try-it-btn);
+}
+
+.try-it-free-btn:hover,
+.try-it-free-btn:focus {
+    background-color: var(--try-it-btn-hover);
+}
+
+.try-it-free-btn span{
+    font-weight: 300;
+}
+
+/* Sign Up Form */
+
+.sign-up-form {
+    background-color: #fff;
+    padding: 1em 1.5em;
+    margin-bottom: 3em;
+    color: var(--grayish-blue);
+    border-radius: 5px;
+}
+
+.input-ele {
+    width: 100%;
+    padding: 0.9em 1em;
+    margin: 1em 0;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 5px;
+    color: var(--dark-blue);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.field-empty-alert {
+    border: 1.5px solid var(--main-background);
+}
+
+.claim-btn {
+    margin-top: 2em;
+    color: #fff;
+    background-color: var(--claim-it-btn);
+}
+
+.claim-btn:hover,
+.claim-btn:focus {
+    color: #fff;
+    background-color: var(--claim-it-btn-hover);
+}
+
+.agree-to-terms {
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.agree-to-terms span {
+    color: var(--main-background);
+    font-weight: 700;
+}
+
+@media(min-width: 768px) {
+    .try-it-free-btn {
+        padding: 0.5em;
+    }
+}
+

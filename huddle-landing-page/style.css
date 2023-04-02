@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@100;200;300;400;600&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: var(--violet);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    color: #fff;
+} 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    text-align: left;
+}
+
+.logo {
+    width: 7.5rem;
+}
+
+.illustration-section img{
+    width: 100%;
+    margin: 3rem 0;
+}
+
+main h1 {
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+
+main p {
+    font-size: 0.9rem;
+    margin: 1.5rem 1.3rem;
+    line-height: 1.5;
+}
+
+main button {
+    width: 60%;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    color: var(--violet);
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+    margin-top: 4rem; 
+}
+
+.fa-brands {
+    font-size: 0.7rem;
+    margin: 0 3px;
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+main button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--soft-magenta);
+}
+
+.fa-brands:hover {
+    cursor: pointer;
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+}
+
+@media(min-width: 375px) {
+    body {
+        background-image: url(./images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-position: center; */
+    } 
+
+    main button {
+        width: 30%;
+    }
+}
+
+@media(min-width: 728px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 4rem;
+        gap: 3rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .logo {
+        width: 12rem;
+        margin-bottom: 3rem;
+    }
+
+    main {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    main p{
+        width: 58%;
+        font-size: 1.1rem;
+    }
+    
+    main button {
+        width: 20%;
+        font-size: 1rem;
+        margin: 0 1.5rem;
+    }
+
+    .social-icons {
+        align-self: flex-end;
+        position: absolute;
+        top: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

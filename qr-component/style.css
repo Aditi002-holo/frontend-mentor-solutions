@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    /* postioning attribution */
+    position: absolute;
+    top: 100;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: hsl(212, 45%, 89%);
+    /* Center the qr-component */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-comp {
+    margin: auto;
+    border: 1px solid #fff;
+    background: #fff;
+    padding:15px 0;
+    width: 280px;
+    height: 440px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* setting size of the image */
+img {
+    width: 250px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 20px 20px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 13px;
+    margin: 20px 28px;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+@media(max-width: 375px) {
+    .qr-comp {
+        width: 250px;
+        height: 400px;
+    }
+
+    img {
+        width: 220px;
+    }
+}
+
+
+
+
+

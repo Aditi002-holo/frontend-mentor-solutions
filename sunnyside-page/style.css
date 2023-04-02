@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300&family=Barlow+Semi+Condensed:wght@200;300;400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Part 01 - Header */
+.header {
+    background: url(./images/desktop/image-header.jpg) no-repeat center center / cover;
+    height: 100vh;
+    width: auto;
+    color: #fff;
+    margin: auto;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.header .navbar h2 {
+    font-size: 2rem;
+}
+
+.header .navbar div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar div ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0 20px;
+}
+
+ul li a {
+    color: #fff;
+    font-size: 12px;
+}
+
+ul > li:last-of-type {
+    margin-right: 35px;
+}
+
+.btn-nav {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    /* take all the height there is, lord vh */
+    height: 100vh;
+}
+
+.header-content h1 {
+    font-size: 4rem;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    /* with respect to root element - html, body */
+    letter-spacing: 1rem;
+    margin-top: 1.5em;
+}
+
+.header img {
+    width: 45px;
+    /* to bring the arrow to the centwe */
+    position: absolute;
+    top: 46%;
+    left: 49%;
+    opacity: 0.8;
+}
+
+/* PART - 02 : Main Brand Section */
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 110px;
+}
+
+.main-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+    margin: 30px 0px;
+    line-height: 1.1;
+}
+
+.main-text p {
+    font-size: 17px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #000;
+    opacity: 0.45;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.main-text .btn-sub {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Style bottom of the button */
+
+.btn-bottom {  
+    height: .5rem;
+    width: 7.3rem;
+    border-radius: 10px;
+    opacity: 0.2;
+    position: relative;
+    top: -2%;
+    left: -1%;
+}
+
+.yellow-strike {
+    background-color: hsl(51, 100%, 49%);
+}
+
+.pink-strike {
+    background-color: #fe7867 ;
+}
+
+/* Background images with text */
+
+.image-container {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #000;
+}
+
+.image-container > .text-over-image-01, .image-container > .text-over-image-02 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h5 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 30px;
+}
+
+.image-container p {
+    font-size: 17px;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 600;
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text-over-image-01 h5, p {
+    color: hsl(167, 40%, 24%);
+}
+
+.text-over-image-02 h5, p {
+    color: hsl(198, 62%, 26%);
+}
+
+/* Images above the footer */
+
+.images-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.images-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* Testimonials section */
+
+.testimonials {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px;
+}
+
+.testimonials h2 {
+    color:hsl(213, 9%, 39%);
+    opacity: 0.5;
+    font-size: 23px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+}
+
+.content {
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-testimonial {
+    display: block;
+    text-align: center;
+    padding: 0 2.5rem;
+}
+
+.client-testimonial img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.client-testimonial p {
+    color: #222;
+    font-size: 16px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    opacity: 0.8;
+    line-height: 1.6;
+    padding: 50px 0;
+}
+
+.client-testimonial h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.client-testimonial h6 {
+    color: #888;
+    opacity: 0.8;
+}
+
+/* Footer */
+
+footer {
+    height: 350px;
+    display: block;
+    padding: 80px;
+    text-align: center;
+    background: hsl(168,45%,69%);
+    color: hsl(168, 34%, 41%);
+}
+
+footer h2 {
+    font-size: 34px;
+    padding-bottom: 40px;
+    color: hsl(167, 40%, 24%);
+    opacity: 0.8;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+footer > ul:last-of-type {
+    padding-top: 80px;
+}
+
+footer ul li {
+    padding: 0 10px;
+}
+
+footer ul .icons {
+    padding: 0;
+}
+
+
